@@ -13,12 +13,12 @@ from urllib.parse import urlparse, parse_qs
 #os.environ['PYTHONASYNCIODEBUG'] = '1'
 
 # Paste your credentials below: 
-API_KEY = ""
-SECRET_KEY = "" 
-RURL = "" # Redirect url
-TOTP_KEY = ""
-MOBILE_NO = ""
-PIN   =    ""
+API_KEY = "837f7e59-3876-4885-ba27-a2390de872fe"
+SECRET_KEY = "wtplwvyqyt" 
+RURL = "http://127.0.0.1" # Redirect url
+TOTP_KEY = "957861"
+MOBILE_NO = "9305857787"
+PIN   =    "092000"
 
 host = "https://api-v2.upstox.com/login/authorization"
 service_host = "https://service.upstox.com/login"
@@ -96,7 +96,7 @@ async def get_code():
 
         if response.status_code == 302:
             client.headers.update(
-                {"x-device-details": "platform=WEB|osName=Windows/10|osVersion=Chrome/116.0.0.0|appVersion=4.0.0|modelName=Chrome|manufacturer=unknown"}
+                {"x-device-details": "platform=WEB|osName=Windows/10|osVersion=Edge/119.0.2151.58|appVersion=4.0.0|modelName=Edgr|manufacturer=unknown"}
                 )
             if response.next_request:
                 redirect_url = response.next_request.url
